@@ -8,6 +8,11 @@ My Posts
 <li>
 <%= link_to post.title, post_path(post.id) %>
 <%= link_to '[Edit]', edit_post_path(post.id), class: 'command' %>
+<%= link_to '[×]', 
+post_path(post.id), 
+method: :delete, 
+class: 'command',
+data: { confirm: 'まじ？' } %>
 </li>
 <% end %>
 <ul>
